@@ -1,13 +1,48 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,500;6..12,700&display=swap");
+
+@layer base {
+  html {
+    @apply font-nunito;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Buttons */
+.btn-reguler {
+  @apply px-9 py-6 font-bold text-2xl leading-9 flex items-center justify-center;
+}
+.btn-very-small {
+  @apply px-6 py-[14px] font-bold leading-6 flex items-center justify-center;
+}
+.btn-primary {
+  @apply bg-mango text-white rounded-full;
+}
+.btn-link {
+  @apply bg-white text-mango;
+}
+.btn-active {
+  @apply text-mango border-b-2 border-mango fill-mango;
+}
+
+/* Texts */
+.text-body-1 {
+  @apply text-[32px] leading-[48px];
+}
+.text-body-2 {
+  @apply text-2xl leading-9;
+}
+.text-body-3 {
+  @apply text-xl leading-[30px];
+}
+.text-body-4 {
+  @apply text-base leading-6;
+}
+
+.card {
+  @apply bg-white rounded-3xl overflow-hidden;
+}
+.card-dropdown {
+  @apply absolute top-[70px] drop-shadow-md;
 }
