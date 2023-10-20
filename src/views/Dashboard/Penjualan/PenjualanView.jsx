@@ -46,7 +46,7 @@ export default function PenjualanView() {
 
         <section className="grid gap-6 grid-cols-10">
           <div className="card p-9 col-span-7">
-            <Barchart />
+            {/* <Barchart /> */}
           </div>
           <CardPenilaian />
         </section>
