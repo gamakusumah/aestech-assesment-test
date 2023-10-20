@@ -1,0 +1,85 @@
+{
+  "branchs": [
+    {
+      "id": 1,
+      "email": "cabang_aceh@gmail.com",
+      "name": "Aceh",
+      "address": "Kota Banda Aceh, Aceh"
+    },
+    {
+      "id": 2,
+      "email": "cabang_bandung@gmail.com",
+      "name": "Bandung",
+      "address": "Bandung, Jawa Barat"
+    },
+    {
+      "id": 3,
+      "email": "cabang_bali@gmail.com",
+      "name": "Bali",
+      "address": "Bali, Bali"
+    },
+    {
+      "id": 4,
+      "email": "cabang_bekasi@gmail.com",
+      "name": "Bekasi",
+      "address": "Bekasi, Jawa Barat"
+    },
+    {
+      "id": 5,
+      "email": "cabang_yogyakarta@gmail.com",
+      "name": "Yogyakarta",
+      "address": "Yogyakarta, Daerah Istimewa Yogyakarta"
+    },
+    {
+      "id": 6,
+      "email": "cabang_semarang@gmail.com",
+      "name": "Semarang",
+      "address": "Semarang, Jawa Tengah"
+    },
+    {
+      "id": 7,
+      "email": "cabang_tasikmalaya@gmail.com",
+      "name": "Tasikmalaya",
+      "address": "Tasikmalaya, Jawa Barat"
+    },
+    {
+      "id": 8,
+      "email": "cabang_tangerang@gmail.com",
+      "name": "Tangerang",
+      "address": "Tangerang, Banten"
+    },
+    {
+      "id": 9,
+      "email": "cabang_surabaya@gmail.com",
+      "name": "Surabaya",
+      "address": "Surabaya, Jawa Timur"
+    },
+    {
+      "id": 10,
+      "email": "cabang_solo@gmail.com",
+      "name": "Solo",
+      "address": "Solo, Jawa Tengah"
+    }
+  ],
+  "KRYWN-202310-0018": {
+    "id": "KRYWN-202310-0018",
+    "fullname": "GAMA KUSUMAH",
+    "gender": "L",
+    "date_of_birth": "22/02/2001",
+    "position": "Frontend Developer",
+    "avatar": "https://images.unsplash.com/photo-1544502062-f82887f03d1c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3359&q=80",
+    "branch": {
+      "id": 2,
+      "email": "cabang_bandung@gmail.com",
+      "name": "Bandung",
+      "address": "Bandung, Jawa Barat"
+    },
+    "social_media": [
+      {
+        "twitter": "URL",
+        "facebook": "URL",
+        "instagram": "URL"
+      }
+    ]
+  }
+}

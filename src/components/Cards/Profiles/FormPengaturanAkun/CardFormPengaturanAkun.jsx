@@ -8,6 +8,7 @@ export default function CardFormPengaturanAkun() {
       <Text size="3" type="bold">
         Sosial Media
       </Text>
+
       {/* Row */}
       <div className="flex items-center">
         <div className="w-36">

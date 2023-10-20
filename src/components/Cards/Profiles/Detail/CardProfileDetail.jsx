@@ -1,6 +1,8 @@
 import Text from "../../../Text/Text";
 
-export default function CardProfileDetail() {
+export default function CardProfileDetail(props) {
+  const { data } = props;
+
   return (
     <div className="card px-14 py-12">
       <table className="text-left">
@@ -12,7 +14,7 @@ export default function CardProfileDetail() {
           </th>
           <td>
             <Text size="4" type="normal">
-              KRYWN-00239-2309
+              {data.id}
             </Text>
           </td>
         </tr>
@@ -24,7 +26,7 @@ export default function CardProfileDetail() {
           </th>
           <td>
             <Text size="4" type="normal">
-              Anggy Juniarto
+              {data.fullname}
             </Text>
           </td>
         </tr>
@@ -36,7 +38,7 @@ export default function CardProfileDetail() {
           </th>
           <td>
             <Text size="4" type="normal">
-              Pria
+              {data.gender}
             </Text>
           </td>
         </tr>
@@ -48,7 +50,7 @@ export default function CardProfileDetail() {
           </th>
           <td>
             <Text size="4" type="normal">
-              06/09/1992
+              {data.date_of_birth}
             </Text>
           </td>
         </tr>
@@ -60,7 +62,7 @@ export default function CardProfileDetail() {
           </th>
           <td>
             <Text size="4" type="normal">
-              Dokter
+              {data.position}
             </Text>
           </td>
         </tr>
@@ -72,7 +74,7 @@ export default function CardProfileDetail() {
           </th>
           <td>
             <Text size="4" type="normal">
-              Klinik Cabang Bandung
+              Klinik Cabang {data.branch.name}
             </Text>
           </td>
         </tr>

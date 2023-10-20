@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import CardProfileDetail from "../../components/Cards/Profiles/Detail/CardProfileDetail";
 import CardFormInformasi from "../../components/Cards/Profiles/FormInformasi/CardFormInformasi";
 import CardProfilePrimary from "../../components/Cards/Profiles/Primary/CardProfilePrimary";
@@ -16,9 +17,19 @@ import IcArrow from "../../assets/icons/mdi_chevron-rightBlack.svg";
 
 export default function ProfilView() {
   const [isOpen, setIsOpen] = useState(true);
+  const [data, setData] = useState(false);
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const res = await axios.get("http://localhost:8000/KRYWN-202310-0018");
+    setData(res.data);
+  };
 
   return (
-    <main>
+    <div>
       <LayoutMain>
         <LayoutMain.Head>
           <LayoutMain.HeadLeft>
@@ -59,12 +70,12 @@ export default function ProfilView() {
 
         <LayoutMain.Body>
           <LayoutMain.BodyLeft>
-            <CardProfilePrimary />
+            {data && <CardProfilePrimary data={data} />}
           </LayoutMain.BodyLeft>
           <LayoutMain.BodyRight>
             {isOpen ? (
               <div className="grid gap-6">
-                <CardProfileDetail />
+                {data && <CardProfileDetail data={data} />}
                 <CardFormInformasi />
               </div>
             ) : (
@@ -99,6 +110,6 @@ export default function ProfilView() {
           </ButtonPrimary>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

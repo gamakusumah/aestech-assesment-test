@@ -12,11 +12,11 @@ export default function DaftarCabangView() {
     getData();
   }, []);
 
-  const getData = async () => {
+  const getData = () => {
     axios
-      .get("https://my-json-server.typicode.com/gamakusumah/demo")
+      .get("http://localhost:8000/branchs")
       .then((res) => {
-        console.log(res);
+        setData(res.data);
       })
       .then((err) => {
         console.log(err);
@@ -24,7 +24,7 @@ export default function DaftarCabangView() {
   };
 
   return (
-    <main>
+    <div>
       <Heading>
         <Heading.Title>Daftar Cabang</Heading.Title>
         <Heading.Subtitle>
@@ -36,9 +36,10 @@ export default function DaftarCabangView() {
         <Input type="text" placeholder="Cari cabang" icon={IcSearch} />
       </div>
       <div className="grid grid-cols-2 gap-6">
-        <CardCabangSmall nama="Klinik Bandung" email="" />
+        {data.map((cabang, i) => (
+          <CardCabangSmall nama={cabang.name} email={cabang.email} key={i} />
+        ))}
       </div>
-      <div>{data}</div>
-    </main>
+    </div>
   );
 }

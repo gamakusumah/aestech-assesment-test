@@ -26,7 +26,11 @@ export default function CardProfileSmall() {
           Manager
         </Text>
       </div>
-      {isOpen && <DropdownProfil />}
+      {isOpen && (
+        <div onClick={() => setIsOpen(!isOpen)}>
+          <DropdownProfil />
+        </div>
+      )}
     </div>
   );
 }

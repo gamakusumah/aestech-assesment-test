@@ -1,5 +1,5 @@
+import { Link } from "react-router-dom";
 import IcArrowLeft from "../../../assets/icons/arrow-left.svg";
-import IcDashboard from "../../../assets/icons/dashboard.svg";
 import IcArrowRight from "../../../assets/icons/arrow-right.svg";
 import { useState } from "react";
 
@@ -14,7 +14,7 @@ export default function SidebarSection(props) {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex">
-          <img src={IcDashboard} alt="Dashboard Icon" className="mr-6" />
+          <img src={props.icon} alt="Sidebar Icon" className="mr-6" />
           {props.title}
         </div>
 
@@ -43,11 +43,11 @@ export default function SidebarSection(props) {
 
 const Item = (props) => {
   return (
-    <li className="w-full py-[18px] font-bold text-2xl leading-9 flex items-center justify-between pl-[72px] pr-6 cursor-pointer">
-      <a href={props.link} className="flex">
+    <li className="w-full py-[18px] font-bold text-2xl leading-9 flex items-center justify-between pl-[72px] pr-6 cursor-pointer active:text-mango active:fill-mango">
+      <Link to={props.link} className="flex">
         <img src={props.icon} alt="Menu Icon" className="mr-6" />
         {props.children}
-      </a>
+      </Link>
     </li>
   );
 };
@@ -65,15 +65,15 @@ const Dropdown = (props) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <div className="flex">
-          <img
-            src={`../../../assets/icons/${props.icon}`}
-            alt="Icon"
-            className="mr-6"
-          />
+          <img src={props.icon} alt="Icon" className="mr-6" />
           {props.title}
         </div>
 
-        <img src={IcArrowRight} alt="Right Arrow Icon" />
+        <img
+          src={IcArrowRight}
+          alt="Right Arrow Icon"
+          className={isOpen ? "rotate-90" : null}
+        />
       </button>
       {isOpen && <ul>{props.children}</ul>}
     </li>
@@ -82,7 +82,7 @@ const Dropdown = (props) => {
 
 const DropdownItem = (props) => {
   return (
-    <li className="w-full py-[18px] font-bold text-2xl leading-9 flex items-center justify-between pl-[72px] pr-6 cursor-pointer">
+    <li className="w-full py-[18px] text-body-2 flex items-center justify-between pl-[72px] pr-6 cursor-pointer active:text-mango">
       <a href="#" className="flex w-full ml-[60px]">
         {props.children}
       </a>

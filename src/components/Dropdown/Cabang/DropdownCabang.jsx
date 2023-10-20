@@ -49,7 +49,7 @@ export default function DropdownCabang() {
               Cabang Samarinda
             </li>
           </ul>
-          <div className="w-full">
+          <div className="w-full" onClick={() => setIsOpen(!isOpen)}>
             <ButtonLink
               href="/daftar-cabang"
               size="very-small"

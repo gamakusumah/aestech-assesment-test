@@ -3,7 +3,7 @@ import IcArrow from "../../../../assets/icons/mdi_chevron-rightBlack.svg";
 import Text from "../../../Text/Text";
 import { Link } from "react-router-dom";
 
-export default function CardCabangSmall() {
+export default function CardCabangSmall(props) {
   return (
     <div className="card pl-[42px] py-[42px] pr-9 flex items-center justify-between">
       <div className="flex items-center">
@@ -12,10 +12,10 @@ export default function CardCabangSmall() {
         </div>
         <div>
           <Text size="1" type="bold">
-            Klinik Bandung
+            Klinik {props.nama}
           </Text>
           <Text size="2" type="reguler">
-            clinicbandung@gmail.com
+            {props.email}
           </Text>
         </div>
       </div>
