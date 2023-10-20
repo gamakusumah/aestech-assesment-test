@@ -13,6 +13,7 @@ module.exports = {
         bw: "#1B1B1B",
         bw50: "#999999",
         bw75: "#535353",
+        bw35: "#E3E3E3",
         bw15: "#F8F8F8",
         primaryGreen: "#053D41",
       },
