@@ -1,3 +1,22 @@
+This project use JSON Server for database server
+
+### Please run `npx json-server --watch data/db.json --port 8000` to connect with database
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
